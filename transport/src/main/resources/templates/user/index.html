@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <title >请先登录</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="content">
+    <div class="form sign-in">
+        <form action="login" method="post">
+            <h2>欢迎回来</h2>
+            <label>
+                <span>用户名</span>
+                <input type="text" name="username"/>
+            </label>
+            <label>
+                <span>密码</span>
+                <input type="password" name="password"/>
+            </label>
+
+            <p class="forgot-pass"><a href="upassword">忘记密码？</a></p> <!-- -->
+            <button type="submit" class="submit">登 录</button>
+        </form>
+        <!--            <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button>-->
+    </div>
+
+    <div class="sub-cont">
+        <div class="img">
+            <div class="img__text m--up">
+                <h2>还未注册？</h2>
+                <p>立即注册，发现大量机会！</p>
+            </div>
+            <div class="img__text m--in">
+                <h2>已有帐号？</h2>
+                <p>有帐号就登录吧，好久不见了！</p>
+            </div>
+            <div class="img__btn">
+                <span class="m--up">注 册</span>
+                <span class="m--in">登 录</span>
+            </div>
+        </div>
+        <div class="form sign-up">
+            <form action="register" method="post">
+                <h2>立即注册</h2>
+                <label>
+                    <span>用户名</span>
+                    <input type="text" name="username"/>
+                </label>
+                <label>
+                    <span>手机号</span>
+                    <input type="text" name="tel"/>
+                </label>
+                <label>
+                    <span>密码</span>
+                    <input type="password" id="password" name="password" placeholder="密码长度不少于六位"><span
+                        id="tishi"></span></input>
+                </label>
+                <label>
+                    <span>确认密码</span>
+                    <input type="password" id="repassword" name="repassword" onkeyup="checkpassword()"/>
+                </label>
+                <button type="submit" id="submit" class="submit">注 册</button>
+            </form>
+            <!--                <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号注册</button>-->
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script type="text/javascript">
+    function checkpassword() {
+        var password = document.getElementById("password").value;
+        var repassword = document.getElementById("repassword").value;
+        if (password == repassword) {
+            document.getElementById("tishi").innerHTML = "<br><font color='green'>两次密码输入一致</font>";
+            document.getElementById("submit").disabled = false;
+
+        } else {
+            document.getElementById("tishi").innerHTML = "<br><font color='red'>两次输入密码不一致!</font>";
+            document.getElementById("submit").disabled = true;
+        }
+    }
+</script>
+<div style="text-align:center;">
+</div>
+</body>
+
+</html>
