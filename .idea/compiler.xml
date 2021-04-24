@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Project" />
+        <module name="transport" />
+        <module name="test" />
+        <module name="demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aaab" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="Project" target="1.8" />
+      <module name="qust" target="1.5" />
+      <module name="springboot" target="1.8" />
+      <module name="Springbtoot" target="1.8" />
+      <module name="teachermanagement" target="1.8" />
+      <module name="test" target="1.8" />
+      <module name="transport" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Project" options="-parameters" />
+      <module name="Springbtoot" options="-parameters" />
+      <module name="aaab" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="springboot" options="-parameters" />
+      <module name="teachermanagement" options="-parameters" />
+      <module name="test" options="-parameters" />
+      <module name="transport" options="-parameters" />
+    </option>
+  </component>
+</project>
