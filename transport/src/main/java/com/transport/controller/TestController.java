@@ -9,7 +9,7 @@ public class TestController {
 
     @RequestMapping("test")
     public String test(){
-//asdasdas;[.ll;asdasd
+//asdasdas;[.ll;asdasdasda
         return "main";
     }
 }
