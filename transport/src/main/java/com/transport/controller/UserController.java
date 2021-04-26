@@ -28,7 +28,7 @@ public class UserController {
         }
         return "main";
     }
-//adada
+//adadasadasd
     @RequestMapping("/register")
     public String register(String username, String tel, String password) { //注册
         if(username==""||tel==""||password==""){
