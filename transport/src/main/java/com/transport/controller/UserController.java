@@ -12,7 +12,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    asdjas
 
     @RequestMapping("/useindex")
     public String index() {  //主界面
