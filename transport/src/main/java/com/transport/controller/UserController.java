@@ -7,21 +7,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-//@RequestMapping("use")  //为什么不配置
+//@RequestMapping("/use")  //为什么不配置
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-
-    @RequestMapping("useindex")
+    @RequestMapping("/useindex")
     public String index() {  //主界面
         return "user/index";
     }
 
-    @RequestMapping("login")
+    @RequestMapping("/login")
     public String login(String username, String password) {   //登录
-//        System.out.println("这里"+username+"    "+password);
+        System.out.println("这里"+username+"    "+password);
         User user = userService.login(username, password);
 //        System.out.println(user);
         if (user == null) {
@@ -30,7 +29,7 @@ public class UserController {
         return "main";
     }
 
-    @RequestMapping("register")
+    @RequestMapping("/register")
     public String register(String username, String tel, String password) { //注册
         if(username==""||tel==""||password==""){
             return "user/index";
@@ -41,17 +40,18 @@ public class UserController {
             userService.register(username, password, tel);
             return "user/index";
         } else
+            System.out.println("用户名存在");
             return "main";
         }
     }
 
     //进入修改页面
-    @RequestMapping("upassword")
+    @RequestMapping("/upassword")
     public String update() {
         return "user/upassword";
     }
 
-    @RequestMapping("afterupdate")
+    @RequestMapping("/afterupdate")
     public String afterupdate(String username, String password, String tel) {
         User user = userService.confirmuse(username,tel);
         if(user!=null){

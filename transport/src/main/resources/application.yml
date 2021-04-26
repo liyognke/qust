@@ -10,4 +10,4 @@ mybatis:
   type-aliases-package: com.transport.bean
 #server:
 #  servlet:
-#    context-path: /user  #//上下文路径
+#    context-path: /  #//上下文路径
